@@ -146,7 +146,7 @@ func run(cmd *cobra.Command, argv []string) {
 			clusterName = v.Name()
 		}
 		url = clusters[0].API().URL()
-		fmt.Printf("Only one cluster match the args, will login to cluster:\n Name: %s\n ID: %s\n", clusterName, clusterid)
+		fmt.Printf("Only one cluster match the args: Name: %s ID: %s\n", clusterName, clusterid)
 	} else {
 		cluster, err := doSurvey(clusters)
 		if err != nil {
